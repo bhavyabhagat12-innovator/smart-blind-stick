@@ -48,12 +48,10 @@ IF distance < 150cm AND speed change detected
   LDR (light level)
 ```
 
----
-
-## 🛠️ Hardware Components
+🛠️ Hardware Components
 
 | Component | Purpose |
-|-----------|---------|
+
 | Arduino UNO | Central controller |
 | HC-SR04 Ultrasonic | Obstacle distance measurement |
 | IR Sensor x2 | Pit detection + side obstacles |
@@ -63,7 +61,6 @@ IF distance < 150cm AND speed change detected
 | 8Ω Speaker | Audio alerts |
 | Li-ion Battery + TP4056 | Rechargeable power supply |
 
----
 
 ## 💻 Core Arduino Code
 ```cpp
