@@ -16,8 +16,6 @@ An Arduino-based smart navigation stick that uses **multi-sensor fusion** and **
 
 ## ✨ What Makes This Unique
 
-| Feature | This Project |
-|--------|-------------|-------------|
 | Obstacle detection | ✅ Yes
 | Obstacle classification | ✅ Wall / Human / Pit / Vehicle |
 | Voice alerts | ✅ Context-aware voice |
