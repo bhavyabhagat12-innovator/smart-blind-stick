@@ -1,16 +1,12 @@
 # smart-blind-stick
 Smart Blind Stick with AI-Based Obstacle Detection and Voice Alerts: This project presents a smart assistive device designed to help visually impaired individuals. The system uses an Arduino UNO along with multiple sensors to detect, classify and announce obstacles in real time.
 # 🦯 Adaptive AI-Assisted Smart Blind Stick
-### Predictive Obstacle Classification & Context-Aware Voice Navigation
 
 > 🏆 **1st Place** — College-Level Technical Project Competition, NMIET Talegaon (2025)
-
 ---
 
 ## 🔍 Problem Statement
 Over **40 million visually impaired individuals in India** rely on basic white canes that can only detect obstacles through physical contact. Existing electronic sticks offer a single beep for all obstacles — with no classification, no context, and no intelligence.
-
----
 
 ## 💡 Our Solution
 An Arduino-based smart navigation stick that uses **multi-sensor fusion** and **rule-based AI logic** to:
@@ -18,18 +14,16 @@ An Arduino-based smart navigation stick that uses **multi-sensor fusion** and **
 - **Deliver** context-aware voice alerts based on distance and direction
 - **Adapt** warning intensity based on environment (indoor/outdoor, day/night)
 
----
-
 ## ✨ What Makes This Unique
 
-| Feature | Basic Sticks | This Project |
+| Feature | This Project |
 |--------|-------------|-------------|
-| Obstacle detection | ✅ Yes | ✅ Yes |
-| Obstacle classification | ❌ No | ✅ Wall / Human / Pit / Vehicle |
-| Voice alerts | ❌ No | ✅ Context-aware voice |
-| Night/day detection | ❌ No | ✅ LDR-based |
-| Fall/tilt detection | ❌ No | ✅ MPU6050 gyroscope |
-| Multi-sensor fusion | ❌ No | ✅ 4 sensors combined |
+| Obstacle detection | ✅ Yes
+| Obstacle classification | ✅ Wall / Human / Pit / Vehicle |
+| Voice alerts | ✅ Context-aware voice |
+| Night/day detection | ✅ LDR-based |
+| Fall/tilt detection | ✅ MPU6050 gyroscope |
+| Multi-sensor fusion | ✅ 4 sensors combined |
 
 ---
 
@@ -129,20 +123,54 @@ void loop() {
 
 ---
 
-## 🔮 Future Scope
-- 📱 Mobile app integration for caregiver alerts
-- 🗺️ GPS-based navigation with Google Maps API
-- 🤖 Machine learning-based obstacle recognition
-- 🆘 Emergency SOS with location sharing
+🎯 Features
+Obstacle detection using ultrasonic sensor
+Pit/step detection using IR sensor
+Motion-based detection using MPU6050
+Rule-based AI for obstacle classification
+Voice alerts using DFPlayer Mini
+Low-cost and portable design
 
----
+🧠 How It Works
 
-## 📋 Patent Claim Ideas
-1. Smart navigation aid using multi-sensor fusion for adaptive voice alerts
-2. Rule-based AI decision engine for obstacle type prediction
-3. Context-aware alert modulation based on environmental conditions
+The system continuously collects data from sensors:
+Ultrasonic sensor detects distance to obstacles
+IR sensor detects ground-level hazards
+MPU6050 detects motion
+All data is processed by the Arduino UNO using rule-based logic. Based on the conditions, the system classifies the obstacle and plays the appropriate voice message through a speaker.
 
----
+🛠️ Components Used
+Arduino UNO
+HC-SR04 Ultrasonic Sensor
+IR Sensor
+MPU6050 (Accelerometer + Gyroscope)
+DFPlayer Mini MP3 Module
+Speaker
+Battery
+
+🔌 Circuit Connections
+Component	Arduino Pin
+Ultrasonic TRIG	D9
+Ultrasonic ECHO	D10
+IR Sensor	D6
+DFPlayer RX	D2
+DFPlayer TX	D3
+MPU6050	SDA → A4, SCL → A5
+
+The Arduino code reads sensor values continuously, processes them using rule-based AI logic, and triggers voice alerts depending on obstacle type.
+
+▶️ How to Run
+Connect all components as per the circuit diagram
+Upload the Arduino code using Arduino IDE
+Add voice files (0001.mp3, 0002.mp3, etc.) to SD card
+Power the system
+Test by placing obstacles in front
+
+🔮 Future Scope
+GPS-based navigation
+Mobile app integration
+Machine learning for object recognition
+Emergency SOS feature
 
 ## 👤 Author
 **Bhavya G Bhagat**
